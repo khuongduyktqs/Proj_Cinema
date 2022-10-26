@@ -1,8 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ProjCinema"
+    "\\ProjCinema",
+    "\\ProjCinema\\ProjCinema",
+    "\\ProjCinema\\ProjCinema\\Views",
+    "\\ProjCinema\\ProjCinema\\Views\\Homepage",
+    "\\ProjCinema\\ProjCinema\\Views\\Movie",
+    "\\ProjCinema\\ProjCinema\\Views\\Search",
+    "\\ProjCinema\\ProjCinema\\Views\\Shared",
+    "\\ProjCinema\\ProjCinema\\Views\\User"
   ],
-  "SelectedNode": "\\ProjCinema\\ProjCinema.sln",
+  "SelectedNode": "\\ProjCinema\\ProjCinema\\Views\\Shared\\_UserLayout.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "OREGON Cinema | Người dùng";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+<div class="authed col-md-3 col-sm-6 d-flex justify-content-end align-items-center">
+    <div>
+        <span>Xin chào, <span style="color:rgb(22, 157, 190);">user0001</span></span>
+        <span class="mx-2">|</span>
+        <button data-toggle="modal" data-target="#auth-modal">Đăng xuất</button>
+    </div>
+</div>
+
+<div class="user-profile">
+    <div class="container user-box d-flex">
+        <div class="user-account-info">
+            <div class="d-flex flex-column">
+                <div class="d-flex flex-row">
+                    <h5>THÔNG TIN TÀI KHOẢN</h5>
+                    <button class="btn btn-dark btn-sm ml-3"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Chỉnh sửa</button>
+                </div>
+                <div class="content-title-line"></div>
+            </div>
+
+            <div class="user-account">
+                <h5>UserID: <span>USER0001</span></h5>
+                <h5>Username: <span>user0001</span></h5>
+                <h5>Email: <span>user0001@gmail.com</span></h5>
+            </div>
+
+        </div>
+        <div class="user-ticket-info">
+            <h5>LỊCH SỬ ĐẶT VÉ</h5>
+            <div class="content-title-line"></div>
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">BillID</th>
+                        <th scope="col">MovieName</th>
+                        <th scope="col">MovieTimeID</th>
+                        <th scope="col">RoomID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <th>B00000001</th>
+                        <th>Shang Chi</th>
+                        <th>MVT0000001</th>
+                        <th>R0001</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <th>B00000001</th>
+                        <th>Shang Chi</th>
+                        <th>MVT0000001</th>
+                        <th>R0001</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <th>B00000001</th>
+                        <th>Shang Chi</th>
+                        <th>MVT0000001</th>
+                        <th>R0001</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <th>B00000001</th>
+                        <th>Shang Chi</th>
+                        <th>MVT0000001</th>
+                        <th>R0001</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

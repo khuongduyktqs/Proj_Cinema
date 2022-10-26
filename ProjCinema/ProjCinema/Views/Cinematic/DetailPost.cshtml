@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "OREGON Cinema | Thông tin phim";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="cinematic-post" id="post">
+    <div class="row px-4">
+        <div class="col-md-2 col-sm-1"></div>
+        <div class="col-md-6 col-sm-10 mt-4">
+            <div class="mt-3">
+                <h5>
+                    @if (@ViewBag.category == "blog")
+                    {
+                        <span>BLOG ĐIỆN ẢNH</span>
+                    }
+                    else if (ViewBag.category == "review")
+                    {
+                        <span>BÌNH LUẬN PHIM</span>
+                    }
+                    else
+                    {
+                        <span>TIN KHUYẾN MÃI</span>
+                    }
+                </h5>
+                <div class="content-title-line mb-4"></div>
+            </div>
+            <h3>@ViewBag.post.PostTitle</h3>
+            <p align="justify">
+                &emsp;
+                @for (int i = 0; i < ViewBag.postcontent.PostPara1.Length; i++)
+                {
+                    if (ViewBag.postcontent.PostPara1[i] == '/')
+                    {
+                        <br />
+                        <span>&emsp;</span>
+                        continue;
+                    }
+                    @ViewBag.postcontent.PostPara1[i]
+                }
+            </p>
+            <img class="post-img my-2" src="~/images/post/@ViewBag.category/@ViewBag.postcontent.PostImg1">
+            <p align="justify">
+                &emsp;
+                @for (int i = 0; i < ViewBag.postcontent.PostPara2.Length; i++)
+                {
+                    if (ViewBag.postcontent.PostPara2[i] == '/')
+                    {
+                        <br />
+                        <span>&emsp;</span>
+                        continue;
+                    }
+                    @ViewBag.postcontent.PostPara2[i]
+                }
+            </p>
+            @if (@ViewBag.postcontent.PostImg2 != null)
+            {
+                <img class="post-img my-2" src="~/images/post/@ViewBag.category/@ViewBag.postcontent.PostImg2">
+            }
+            <p align="justify">
+                &emsp;
+                @if (ViewBag.postcontent.PostPara3 != null)
+                {
+                    for (int i = 0; i < ViewBag.postcontent.PostPara3.Length; i++)
+                    {
+                        if (ViewBag.postcontent.PostPara3[i] == '/')
+                        {
+                            <br />
+                            <span>&emsp;</span>
+                            continue;
+                        }
+                        @ViewBag.postcontent.PostPara3[i]
+                    }
+                }
+            </p>
+        </div>
+        <div class="col-md-4 col-dm-0 mt-4">
+            <h5>PHIM ĐANG CHIẾU</h5>
+            <div class="content-title-line mb-5"></div>
+            @foreach (var item in ViewBag.curMovie)
+            {
+                <div class="movie-item">
+                    <a href="/HomePage/Details?id=@item.MovieID">
+                        <img src="~/images/movie/poster/@item.PosterLink">
+                        <div class="movie-title">
+                            <p>@item.MovieName</p>
+                        </div>
+                    </a>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+
+
+

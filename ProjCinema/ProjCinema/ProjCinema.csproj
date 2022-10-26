@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,10 +128,42 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\BookingController.cs" />
+    <Compile Include="Controllers\CinemaController.cs" />
+    <Compile Include="Controllers\CinematicController.cs" />
+    <Compile Include="Controllers\HomepageController.cs" />
+    <Compile Include="Controllers\InstructionController.cs" />
+    <Compile Include="Controllers\MovieController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\TicketController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AD.cs" />
+    <Compile Include="Models\ADMIN_ACCOUNT.cs" />
+    <Compile Include="Models\BILL.cs" />
+    <Compile Include="Models\CINEMA.cs" />
+    <Compile Include="Models\CinemaADS.cs" />
+    <Compile Include="Models\CinemaDB.cs" />
+    <Compile Include="Models\CinemaItem.cs" />
+    <Compile Include="Models\CINEMA_IMAGE.cs" />
+    <Compile Include="Models\CINEMA_LOCATION.cs" />
+    <Compile Include="Models\DEPARTMENT.cs" />
+    <Compile Include="Models\DISCOUNT_CODE.cs" />
+    <Compile Include="Models\FEEDBACK.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\MOVIE.cs" />
+    <Compile Include="Models\MOVIE_TIME.cs" />
+    <Compile Include="Models\POST.cs" />
+    <Compile Include="Models\POST_CONTENT.cs" />
+    <Compile Include="Models\ROOM.cs" />
+    <Compile Include="Models\SEAT.cs" />
+    <Compile Include="Models\SERVICE.cs" />
+    <Compile Include="Models\SERVICE_TO_CASH.cs" />
+    <Compile Include="Models\TICKET.cs" />
+    <Compile Include="Models\TICKET_TYPE.cs" />
+    <Compile Include="Models\USER_ACCOUNT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -158,14 +198,29 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Booking\Booking.cshtml" />
+    <Content Include="Views\Shared\_UserLayout.cshtml" />
+    <Content Include="Views\Homepage\Homepage.cshtml" />
+    <Content Include="Views\Cinema\Cinema.cshtml" />
+    <Content Include="Views\Cinematic\Blog.cshtml" />
+    <Content Include="Views\Cinematic\DetailPost.cshtml" />
+    <Content Include="Views\Cinematic\Review.cshtml" />
+    <Content Include="Views\Cinematic\Sale.cshtml" />
+    <Content Include="Views\Instruction\Instruction.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
+    <Content Include="Views\Movie\MovieCurrent.cshtml" />
+    <Content Include="Views\Movie\MovieFuture.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\User\UserInfo.cshtml" />
+    <Content Include="Views\User\User.cshtml" />
+    <Content Include="Views\Search\Search.cshtml" />
+    <Content Include="Views\Ticket\Payment.cshtml" />
+    <Content Include="Views\Ticket\SelectSeat.cshtml" />
+    <Content Include="Views\Ticket\SelectService.cshtml" />
+    <Content Include="Views\Ticket\SelectTicket.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
